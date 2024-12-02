@@ -66,7 +66,7 @@ The app requires no environment variables but assumes the backend scraping serve
 
 ## Screenshots
 
-![Screenshot](assets/screenshot.png)
+![Screenshot](/wellfound-job-scraper/src/assets/screenshot.png)
 _Above: Screenshot of the application interface._
 
 
