@@ -32,7 +32,7 @@ This project consists of two main components: a **React frontend** and a **Flask
    npm start
    ```
 
-4. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
+4. Open the app in your browser at [http://localhost:5173](http://localhost:5173).
 
 ### Environment Variables
 The app assumes the backend server is running at `http://localhost:5000/scrape`.
