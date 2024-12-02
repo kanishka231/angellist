@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
 import aiohttp
+from flask_cors import CORS 
 import asyncio
 from bs4 import BeautifulSoup
 import re
 
 app = Flask(__name__)
-
+CORS(app)
 async def fetch_page(session, role, page):
     """
     Fetch a single page of job listings and parse it.
@@ -38,7 +39,7 @@ async def fetch_page(session, role, page):
 
                     results.append({
                         "Company": company_name,
-                        "Job Link": job_link,
+                        "Link": job_link,
                         "Role": job_role,
                     })
 
