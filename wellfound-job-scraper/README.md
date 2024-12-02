@@ -1,8 +1,22 @@
-# React + Vite
+# Wellfound Job Scraper - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+This is a React-based frontend application for scraping job listings from Wellfound (formerly AngelList). The application allows users to search for jobs using free text or predefined job categories.
 
-Currently, two official plugins are available:
+## Features
+- Free Text Job Search
+- Category-based Job Search
+- Responsive Design
+- Error Handling
+- Job Listing Display
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+## Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/wellfound-job-scraper.git
+cd wellfound-job-scraper/frontend
