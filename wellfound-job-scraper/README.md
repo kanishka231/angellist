@@ -66,7 +66,9 @@ The app requires no environment variables but assumes the backend scraping serve
 
 ## Screenshots
 
-(Include screenshots here for better visualization if needed)
+![Screenshot](assets/screenshot.png)
+_Above: Screenshot of the application interface._
+
 
 ## License
 
