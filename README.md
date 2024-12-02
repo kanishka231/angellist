@@ -63,7 +63,7 @@ The app assumes the backend server is running at `http://localhost:5000/scrape`.
 #### Steps
 1. Clone the repository:
    ```bash
-  git clone https://github.com/kanishka231/angellist.git
+   git clone https://github.com/kanishka231/angellist.git
    cd backend
    ```
 
