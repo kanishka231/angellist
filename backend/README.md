@@ -24,7 +24,7 @@ This project is a Flask-based web application that scrapes job listings from [We
 ### Steps
 1. Clone the repository:
    ```bash
-  git clone https://github.com/kanishka231/angellist.git
+   git clone https://github.com/kanishka231/angellist.git
    cd backend
 2. Create and activate a virtual environment:
    ```bash

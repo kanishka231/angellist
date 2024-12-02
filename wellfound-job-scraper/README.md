@@ -33,7 +33,7 @@ This is a React-based web application for scraping job listings from Wellfound (
    npm start
    ```
 
-4. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
+4. Open the app in your browser at [http://localhost:5173](http://localhost:5173).
 
 ## Usage
 
