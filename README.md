@@ -19,8 +19,7 @@ This project consists of two main components: a **React frontend** and a **Flask
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd wellfound-job-scraper/frontend
+   git clone https://github.com/kanishka231/angellist.git
    ```
 
 2. Install dependencies:
