@@ -1,35 +1,77 @@
-# Wellfound Job Scraper API
+# Wellfound Job Scraper
 
-This project is a Flask-based web application that scrapes job listings from [Wellfound](https://wellfound.com) for a specified role. It uses `aiohttp` for asynchronous HTTP requests and `BeautifulSoup` for HTML parsing. The application is designed to handle multiple pages of results efficiently.
+This project consists of two main components: a **React frontend** and a **Flask-based backend**. Together, they provide a complete solution for scraping and displaying job listings from [Wellfound](https://wellfound.com).
 
-## Features
+---
+
+## Frontend: React Application
+
+### Features
+- **Free Text Search**: Allows users to input any job role and retrieve matching job listings.
+- **Category Search**: Enables users to select predefined categories and roles for a more guided search.
+- **Real-Time Scraping**: Fetches job listings dynamically from the backend.
+- **Interactive UI**: Displays job details, including role, company, location, salary, and a link to apply.
+
+### Prerequisites
+- Node.js (version 14 or later)
+- A running backend server to handle scraping (accessible at `http://localhost:5000/scrape`)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd wellfound-job-scraper/frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the application:
+   ```bash
+   npm start
+   ```
+
+4. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
+
+### Environment Variables
+The app assumes the backend server is running at `http://localhost:5000/scrape`.
+
+---
+
+## Backend: Flask API
+
+### Features
 - Fetches job listings for a specific role from Wellfound.
 - Supports pagination to retrieve results from multiple pages.
-- Provides a REST API endpoint for users to query job roles.
+- Provides a REST API endpoint for querying job roles.
 - Handles CORS for cross-origin requests.
 
-## Tech Stack
+### Tech Stack
 - **Flask**: Web framework.
 - **aiohttp**: Asynchronous HTTP client.
 - **BeautifulSoup**: HTML parsing.
 - **Flask-CORS**: CORS support for Flask.
 - **Python 3.7+**
 
-## Installation
+### Installation
 
-### Prerequisites
+#### Prerequisites
 - Python 3.7 or higher
 - `pip` package manager
 
-### Steps
+#### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kanishka231/angellist.git
+  git clone https://github.com/kanishka231/angellist.git
    cd backend
+   ```
+
 2. Create and activate a virtual environment:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # On Windows: venv\Scriptsctivate
    ```
 
 3. Install dependencies:
@@ -44,20 +86,20 @@ This project is a Flask-based web application that scrapes job listings from [We
 
 The application will be accessible at `http://127.0.0.1:5000`.
 
-## API Usage
+### API Usage
 
-### Endpoint
+#### Endpoint
 `GET /scrape`
 
-### Query Parameters
+#### Query Parameters
 - **role** (required): The job role to search for.
 
-### Example Request
+#### Example Request
 ```bash
 curl "http://127.0.0.1:5000/scrape?role=software-engineer"
 ```
 
-### Example Response
+#### Example Response
 ```json
 [
     {
@@ -73,7 +115,7 @@ curl "http://127.0.0.1:5000/scrape?role=software-engineer"
 ]
 ```
 
-### Error Responses
+#### Error Responses
 - Missing role parameter:
   ```json
   {
@@ -88,32 +130,25 @@ curl "http://127.0.0.1:5000/scrape?role=software-engineer"
   }
   ```
 
+---
+
 ## File Structure
 ```
-backend/
+angelist/
 │
-├── app.py                  # Main application file
-├── requirements.txt        # Python dependencies
-├── README.md               # Documentation (this file)
+├── wellfound-job-scraper/  
+│   ├── src/                # Source code for React app
+│   ├── public/             # Public assets
+│   ├── package.json        # React app dependencies
+│   └── README.md           # Documentation for frontend
+│
+├── backend/                # Flask-based backend application
+│   ├── app.py              # Main application file
+│   ├── requirements.txt    # Python dependencies
+│   ├── README.md           # Documentation for backend
+│
+└── README.md               # Combined documentation
 ```
-
-## Dependencies
-- Flask
-- Flask-CORS
-- aiohttp
-- beautifulsoup4
-
-Install these using:
-```bash
-pip install -r requirements.txt
-```
-
-## How It Works
-1. The `/scrape` endpoint accepts a `role` query parameter.
-2. It initiates asynchronous requests to Wellfound to fetch job listings.
-3. The `BeautifulSoup` library parses the HTML response to extract relevant data.
-4. Pagination is handled to retrieve all results.
-5. The API returns the results as a JSON response.
 
 ## Future Enhancements
 - Add support for additional filtering options (e.g., location, company size).
@@ -121,14 +156,8 @@ pip install -r requirements.txt
 - Improve error handling for edge cases.
 
 ## License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-## Acknowledgements
-- [Flask](https://flask.palletsprojects.com/)
-- [aiohttp](https://docs.aiohttp.org/)
-- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+This project is open-source and available under the MIT License.
 
 ---
+
 **Note:** Scraping websites may violate their terms of service. Use this application responsibly.
-
-
