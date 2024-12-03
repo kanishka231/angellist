@@ -10,7 +10,7 @@ This project consists of two main components: a **React frontend** and a **Flask
 - **Free Text Search**: Allows users to input any job role and retrieve matching job listings.
 - **Category Search**: Enables users to select predefined categories and roles for a more guided search.
 - **Real-Time Scraping**: Fetches job listings dynamically from the backend.
-- **Interactive UI**: Displays job details, including role, company, location, salary, and a link to apply.
+- **Interactive UI**: Displays job details, including role, company, and a link to apply.
 
 ### Prerequisites
 - Node.js (version 14 or later)
